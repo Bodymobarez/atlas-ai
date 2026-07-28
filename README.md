@@ -8,18 +8,27 @@ Atlas AI prevents premature coding. Every product run must complete discovery, r
 
 Security, performance, accessibility, localization, testing, monitoring, and documentation are **defaults**.
 
-## One-shot autopilot (recommended)
+## One-shot autopilot (recommended) — v2
 
 1. Open **any new AI chat** (Cursor / Claude Code / Gemini / Copilot Chat…)
 2. Paste the magic block from [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) (repo link + `نفّذ مشروع` + your idea)
-3. The agent must read [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) and **self-activate** Consultant → Master → all specialists → MVP build
+3. The agent must read [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) and:
+
+   - **Idea Research** first (general research on your idea)  
+   - **Interactive Planner** — builds the plan **piece by piece with you** until you say **`اعتمد البلان`**  
+   - Then Master + specialists  
+   - **Elite Designer** for premium UI (not generic AI UI)  
+   - Build MVP only after G8  
 
 **Direct files:**
 
 | File | Role |
 |------|------|
-| [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) | Autopilot brain — activates everything |
-| [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) | Copy-paste prompt for new chats |
+| [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) | Autopilot brain v2 |
+| [`agents/IDEA_RESEARCH_AGENT.md`](agents/IDEA_RESEARCH_AGENT.md) | Research the idea first |
+| [`agents/INTERACTIVE_PLANNER_AGENT.md`](agents/INTERACTIVE_PLANNER_AGENT.md) | Plan piece-by-piece |
+| [`agents/ELITE_DESIGNER_AGENT.md`](agents/ELITE_DESIGNER_AGENT.md) | World-class design first pass |
+| [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) | Copy-paste prompt |
 | [`AGENTS.md`](AGENTS.md) | Universal agent entrypoint |
 
 ## Manual quick start

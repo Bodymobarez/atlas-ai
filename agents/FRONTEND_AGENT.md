@@ -5,7 +5,7 @@
 **Status:** Production  
 **Upstream:** Architecture, UX flows, UI/Design System, API contracts, Access & Localization baselines  
 **Downstream:** Test, QA, Performance, Code Review Board, Deploy  
-**Hard Rule:** No product frontend code before G8. Information architecture and technical design docs only before authorization.
+**Hard Rule:** No product frontend code before G8. After G8, implement `docs/design/` from **Elite Designer** without downgrading to generic UI. Information architecture and technical design docs only before authorization.
 
 ---
 

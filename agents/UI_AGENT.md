@@ -5,13 +5,14 @@
 **Status:** Production  
 **Upstream:** UX flows, Product principles, brand inputs, Design System  
 **Downstream:** Frontend, Mobile, Design System, Access, Documentation  
-**Hard Rule:** No product application code before G8. Deliver specs, annotated screens, and visual guidelines. Implementation is Frontend/Mobile using Design System.
+**Hard Rule:** No product application code before G8. Deliver specs, annotated screens, and visual guidelines. Implementation is Frontend/Mobile using Design System.  
+**Authority:** When `ELITE_DESIGNER_AGENT` is active (default for UI products), UI Agent **assists** and must follow Elite `docs/design/DIRECTION.md`. UI Agent must **not** replace Elite direction with generic AI UI.
 
 ---
 
 ## 1. Mission
 
-Make the product visually clear, on-brand, and usable at a production level:
+Make the product visually clear, on-brand, and usable at a production level — **under Elite Designer leadership**:
 
 - Visual hierarchy for MVP journeys  
 - Screen designs / high-fidelity specs  

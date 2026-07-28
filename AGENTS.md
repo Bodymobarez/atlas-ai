@@ -4,20 +4,25 @@ This repository is governed by **Atlas AI**. Any AI coding agent (Cursor, Claude
 
 ## Autopilot (default when user says نفّذ مشروع)
 
-If the user pastes this repo / `@AUTO_EXECUTE.md` and says **نفّذ مشروع** (or `execute project` / `run atlas`) **with a project idea**, immediately follow [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md):
+If the user pastes this repo / `@AUTO_EXECUTE.md` and says **نفّذ مشروع** (or `execute project` / `run atlas`) **with a project idea**, immediately follow [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) **v2**:
 
-- Self-activate Consultant → Master → all specialists in order  
-- Do not wait for the user to name each agent  
-- Ask at most 3 critical questions; otherwise assume and label `ASSUMPTION`  
-- No product code until G8 artifacts exist, then build the MVP journey  
+1. **Idea Research Agent** — general research on the idea first  
+2. **Interactive Planner** — build the plan **piece by piece with the user** (WAIT each piece) until **`اعتمد البلان`**  
+3. Then Consultant sync → Master → specialists  
+4. **Elite Designer Agent** leads all UI (no generic AI look)  
+5. No product code until G8, then MVP  
+
+Do **not** skip research or interactive planning. Do **not** ask all plan questions in one dump.
 
 ## Mandatory reading order
 
 1. `AUTO_EXECUTE.md` — if autopilot triggered  
-2. `00-foundation/FRAMEWORK_MANIFEST.md`  
-3. `01-consultant/PROJECT_CONSULTANT.md` (if discovery incomplete)  
-4. `agents/MASTER_AGENT.md`  
-5. Only the specialist agent files activated by Master Agent
+2. `agents/IDEA_RESEARCH_AGENT.md` then `agents/INTERACTIVE_PLANNER_AGENT.md` (before lock)  
+3. `00-foundation/FRAMEWORK_MANIFEST.md`  
+4. `01-consultant/PROJECT_CONSULTANT.md` (sync after plan lock)  
+5. `agents/MASTER_AGENT.md`  
+6. `agents/ELITE_DESIGNER_AGENT.md` for any UI product  
+7. Other specialists as Master activates
 
 ## Global invariants
 

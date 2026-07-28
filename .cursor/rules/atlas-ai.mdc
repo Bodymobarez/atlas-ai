@@ -16,10 +16,12 @@ You are operating inside an Atlas AI repository.
 
 ## Source of truth
 
-1. `00-foundation/FRAMEWORK_MANIFEST.md`
+1. `AUTO_EXECUTE.md` (autopilot v2)
 2. `AGENTS.md`
-3. `agents/MASTER_AGENT.md`
-4. Active specialist under `agents/`
+3. After idea: `agents/IDEA_RESEARCH_AGENT.md` then `agents/INTERACTIVE_PLANNER_AGENT.md` (wait each piece; lock with اعتمد البلان)
+4. `agents/ELITE_DESIGNER_AGENT.md` for UI — reject generic AI slop
+5. `agents/MASTER_AGENT.md` after plan lock
+6. Active specialist under `agents/`
 
 ## Continuity protocol
 

@@ -67,22 +67,27 @@ If any required artifact is missing → return to Project Consultant. Do not inv
 ## 4. Phases & Agent Activation Order
 
 ```
-PHASE 0  Bootstrap & Status
+PHASE -2 Idea Research (FIRST)       → IDEA_RESEARCH_AGENT  [G-IR]
+PHASE -1 Interactive Planning        → INTERACTIVE_PLANNER_AGENT
+         *** WAIT piece-by-piece; HARD STOP until user: اعتمد البلان [G-PLAN] ***
+PHASE 0  Bootstrap & Status (+ Consultant sync from locked plan)
 PHASE 1  Discovery Reinforcement     → DISCOVERY_AGENT
-PHASE 2  Evidence Gathering          → RESEARCH_AGENT
+PHASE 2  Evidence Gathering (gaps)   → RESEARCH_AGENT
 PHASE 3  Business Clarity            → BUSINESS_ANALYST
 PHASE 4  Product Definition          → PRODUCT_MANAGER
 PHASE 5  Architecture                → SYSTEM_ARCHITECT
          >>> HUMAN GATE: Architecture & MVP Approval <<<
 PHASE 6  Data & Contracts Design     → DATABASE_AGENT, API_AGENT (design only)
-PHASE 7  Experience Design           → UX_AGENT, UI_AGENT, DESIGN_SYSTEM_AGENT
-         >>> HUMAN GATE: Experience Direction (if UI-heavy) <<<
+PHASE 7  Experience Design           → ELITE_DESIGNER_AGENT (LEADS),
+                                       then UX_AGENT, DESIGN_SYSTEM_AGENT, UI_AGENT
+         >>> G6 requires Elite anti-slop pass for UI products <<<
 PHASE 8  Cross-Cutting Baselines     → SECURITY_AGENT, PERFORMANCE_AGENT,
                                        ACCESS_AGENT, LOCALIZATION_AGENT,
                                        COST_OPTIMIZATION_AGENT (baselines)
 PHASE 9  Implementation Authorization (Master issues token)
 PHASE 10 Build Specialists           → BACKEND, FRONTEND, MOBILE, API (impl),
                                        AI_AGENT, DATABASE (migrations), etc.
+         Frontend must not downgrade Elite Design specs
 PHASE 11 Quality                     → TEST_AGENT, QA_AGENT, CODE_REVIEW_BOARD
 PHASE 12 Ship                        → DEVOPS, DEPLOY, MONITOR, DOCUMENTATION
 PHASE 13 Operate & Optimize          → MONITOR + COST_OPTIMIZATION + continuous QA

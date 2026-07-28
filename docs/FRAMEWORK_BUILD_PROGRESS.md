@@ -1,7 +1,7 @@
 # Atlas AI — Framework Build Progress
 
 **Last updated:** 2026-07-28  
-**State:** Core framework delivered
+**State:** Core framework delivered + v2 autopilot (research → interactive plan → elite design)
 
 ## Completed
 
@@ -11,10 +11,14 @@
 - [x] `README.md`
 - [x] `AGENTS.md`
 - [x] `CLAUDE.md`
+- [x] `AUTO_EXECUTE.md` v2
 - [x] `.cursor/rules/atlas-ai.mdc`
 - [x] `.gitignore`
 
 ### Agents (ordered)
+- [x] IDEA_RESEARCH_AGENT (v2)
+- [x] INTERACTIVE_PLANNER_AGENT (v2)
+- [x] ELITE_DESIGNER_AGENT (v2)
 - [x] MASTER_AGENT
 - [x] DISCOVERY_AGENT
 - [x] RESEARCH_AGENT

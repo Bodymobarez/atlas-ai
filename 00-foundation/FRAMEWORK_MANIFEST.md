@@ -170,6 +170,8 @@ atlas-ai/
 
 | Order | Agent File | Role |
 |------:|------------|------|
+| 0a | `agents/IDEA_RESEARCH_AGENT.md` | General research on the idea (first) |
+| 0b | `agents/INTERACTIVE_PLANNER_AGENT.md` | Plan piece-by-piece with user until lock |
 | 1 | `agents/MASTER_AGENT.md` | Orchestration, gates, conflict resolution |
 | 2 | `agents/DISCOVERY_AGENT.md` | Stakeholder & problem discovery |
 | 3 | `agents/RESEARCH_AGENT.md` | Market, tech, regulatory evidence |
@@ -185,6 +187,7 @@ atlas-ai/
 | 13 | `agents/UI_AGENT.md` | Visual interface craft |
 | 14 | `agents/UX_AGENT.md` | Flows, usability, research synthesis |
 | 15 | `agents/DESIGN_SYSTEM_AGENT.md` | Tokens, components, consistency |
+| 15★ | `agents/ELITE_DESIGNER_AGENT.md` | Premium design lead (first-pass world-class UI) |
 | 16 | `agents/SECURITY_AGENT.md` | Threats, controls, compliance |
 | 17 | `agents/QA_AGENT.md` | Quality strategy, risk-based testing |
 | 18 | `agents/TEST_AGENT.md` | Test design & automation |

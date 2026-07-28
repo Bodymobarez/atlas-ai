@@ -4,6 +4,8 @@ Human/agent approval checkpoints. Records go in `gates/records/`.
 
 | ID | Name | Typical owner |
 |----|------|---------------|
+| G-IR | Idea Research Complete | Idea Research Agent |
+| G-PLAN | Complete Plan Locked | Interactive Planner + User (`اعتمد البلان`) |
 | G0 | Consultant Ready | Project Consultant + Human |
 | G1 | Discovery Complete | Discovery + Master |
 | G2 | Research Sufficient | Research + Master |
