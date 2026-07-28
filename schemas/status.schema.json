@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlas-ai.local/schemas/status.schema.json",
+  "title": "AtlasAIStatus",
+  "type": "object",
+  "required": [
+    "AUTHORIZATION_STATE",
+    "CURRENT_PHASE",
+    "ACTIVE_AGENT",
+    "UPDATED"
+  ],
+  "properties": {
+    "AUTHORIZATION_STATE": {
+      "type": "string",
+      "enum": [
+        "BLOCKED_NO_CODE",
+        "AUTHORIZED_IMPLEMENTATION",
+        "N/A_FRAMEWORK_META",
+        "REVOKED"
+      ]
+    },
+    "CURRENT_PHASE": { "type": "string" },
+    "ACTIVE_AGENT": { "type": "string" },
+    "LAST_GATE": { "type": "string" },
+    "NEXT_ACTION": { "type": "string" },
+    "BLOCKERS": { "type": "string" },
+    "VIOLATIONS": { "type": "string" },
+    "PLAN_PATH": { "type": "string" },
+    "UPDATED": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": true
+}

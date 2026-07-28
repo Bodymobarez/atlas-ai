@@ -1,0 +1,34 @@
+---
+description: Atlas AI framework invariants for all Cursor agents
+globs:
+alwaysApply: true
+---
+
+# Atlas AI — Cursor Rules
+
+You are operating inside an Atlas AI repository.
+
+## Hard stops
+
+- Do not write product application code until `docs/STATUS.md` contains `AUTHORIZATION_STATE: AUTHORIZED_IMPLEMENTATION` issued by Master Agent after required gates.
+- Discovery, research, business, product, and architecture artifacts come first.
+- Never skip tests, security, performance, accessibility, localization, or documentation without a written waiver in `gates/records/`.
+
+## Source of truth
+
+1. `00-foundation/FRAMEWORK_MANIFEST.md`
+2. `AGENTS.md`
+3. `agents/MASTER_AGENT.md`
+4. Active specialist under `agents/`
+
+## Continuity protocol
+
+If context is full: finish the current file completely, then print exactly:
+
+`NEXT FILE:relative/path/to/file`
+
+On user message `CONTINUE`, resume from that path. Do not rewrite completed files.
+
+## Quality
+
+Every agent artifact must be production-complete: purpose, inputs, process, outputs, gates, anti-patterns, definition of done, handoff. No stub content in core framework files.

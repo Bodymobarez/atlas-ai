@@ -1,0 +1,47 @@
+openapi: 3.1.0
+info:
+  title: "{Project} API"
+  version: "0.1.0"
+  description: >
+    Template OpenAPI skeleton for Atlas AI projects.
+    Expand during API Agent design phase. Do not invent
+    production endpoints without BRD/MVP traceability.
+servers:
+  - url: https://api.example.com
+    description: Production (placeholder)
+  - url: https://api.staging.example.com
+    description: Staging (placeholder)
+tags:
+  - name: health
+    description: Liveness/readiness
+paths:
+  /health:
+    get:
+      tags: [health]
+      operationId: getHealth
+      summary: Health check
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      required: [status]
+      properties:
+        status:
+          type: string
+          enum: [ok, degraded]
+        correlationId:
+          type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
