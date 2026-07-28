@@ -5,35 +5,28 @@
 | ماذا | الرابط |
 |------|--------|
 | الريبو | https://github.com/Bodymobarez/atlas-ai |
-| Autopilot v3 | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md |
-| معيار الخبرة | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/_EXPERT_STANDARD.md |
-| معالج البلان (اختيار بالماوس) | https://github.com/Bodymobarez/atlas-ai/tree/main/interactive/plan-wizard |
+| Autopilot v4 | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md |
+| **Professor Standard** | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/_EXPERT_STANDARD.md |
+| معالج البلان | https://github.com/Bodymobarez/atlas-ai/tree/main/interactive/plan-wizard |
 
 ## الجملة السحرية
 
 ```text
 Repo: https://github.com/Bodymobarez/atlas-ai
 Read AUTO_EXECUTE.md, AGENTS.md, and agents/_EXPERT_STANDARD.md first.
+Activate Professor Mode for every agent.
 نفّذ مشروع
 
 الفكرة:
 <<< اكتب فكرة مشروعك هنا >>>
 ```
 
-## التدفق المتوقع (v3)
+## التدفق (v4)
 
-1. **ريسيرش عام** على الفكرة (مستوى خبير)  
-2. يفتح لك **معالج البلان** أو يسألك **سؤال واحد** باختيارات A/B/C للضغط/الاختيار  
-3. تكمّل الأسئلة → **اعتمد البلان**  
-4. باقي الوكلاء (كلهم Expert Mode) + **Elite Designer**  
-5. التنفيذ بعد G8  
+1. كل وكيل = **Professor Mode** (مستوى بروفيسور + ممارس Distinguished)  
+2. ريسيرش الفكرة  
+3. أسئلة البلان **سؤال سؤال** باختيار بالماوس  
+4. بعد `اعتمد البلان` → باقي السلسلة بنفس الشدة  
+5. Elite Designer + تنفيذ بعد G8  
 
-### تشغيل معالج البلان محليًا
-
-```bash
-git clone https://github.com/Bodymobarez/atlas-ai.git
-cd atlas-ai/interactive/plan-wizard
-python3 -m http.server 8765
-```
-
-افتح http://localhost:8765 — اختَر بالماوس — انسخ الناتج للشات.
+معيار الرفض: أي شغل “عادي / متوسط / شات بوت” يتعاد كتابته.

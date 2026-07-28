@@ -1,8 +1,8 @@
 # Atlas AI — AUTO EXECUTE (Autopilot)
 
-**Version:** 3.0.0  
+**Version:** 4.0.0  
 **Purpose:** User pastes repo link + idea + **نفّذ مشروع** → agent self-activates the pipeline.  
-**v3:** Expert-level agents (`_EXPERT_STANDARD.md`) · Idea Research first · Plan via **mouse-selectable** wizard (one question at a time) · Elite Designer for UI.
+**v4:** **Professor Mode** for every agent (`_EXPERT_STANDARD.md` v2) · Idea Research first · mouse-selectable plan wizard · Elite Designer for UI.
 
 ---
 
@@ -23,9 +23,15 @@ You self-activate agents. **You do NOT skip the human planning conversation.**
 3. After full plan → wait for **`اعتمد البلان`** / wizard `PLAN_LOCK`  
 4. Never write product application code before G8  
 
-### Expert bar
+### Professor bar (v4)
 
-Before any agent acts: read `agents/_EXPERT_STANDARD.md`. No junior-level generic answers.
+Before any agent acts: read `agents/_EXPERT_STANDARD.md` (**Professor Standard v2**).
+
+- Identity = professor + distinguished practitioner in that domain  
+- Cognition = FRAME → FIRST PRINCIPLES → OPTIONS → DECIDE → ATTACK → VERIFY → TEACH  
+- Reject mediocre / generic output — rewrite until it survives hostile review  
+- End major steps with **قرار الأستاذ** brief  
+- Announce once: `Professor Mode · {Title} · Atlas AI`
 
 ### May proceed without asking (after plan locked)
 

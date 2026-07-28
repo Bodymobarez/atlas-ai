@@ -1,6 +1,6 @@
 # Atlas AI — Agents Index
 
-**Every agent:** load [`_EXPERT_STANDARD.md`](_EXPERT_STANDARD.md) first (principal/expert bar).
+**Every agent:** load [`_EXPERT_STANDARD.md`](_EXPERT_STANDARD.md) first — **Professor Mode** (professor + distinguished practitioner).
 
 Activate via `AUTO_EXECUTE.md` / Master Agent sequencing.
 

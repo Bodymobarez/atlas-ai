@@ -8,24 +8,24 @@ Atlas AI prevents premature coding. Every product run must complete discovery, r
 
 Security, performance, accessibility, localization, testing, monitoring, and documentation are **defaults**.
 
-## One-shot autopilot (recommended) — v3
+## One-shot autopilot (recommended) — v4 Professor Mode
 
 1. Open **any new AI chat** (Cursor / Claude Code / Gemini / Copilot Chat…)
 2. Paste the magic block from [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md)
 3. The agent reads [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) and:
 
-   - Loads [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) — **expert/principal** bar for every agent  
+   - Loads [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) — **Professor Mode** (professor + distinguished practitioner)  
    - **Idea Research** first  
    - **Plan Wizard** ([`interactive/plan-wizard/`](interactive/plan-wizard/)) — **one question**, **click to select**  
-   - Then Master + specialists + **Elite Designer**  
+   - Then Master + specialists + **Elite Designer** at the same intensity  
    - Build MVP only after G8  
 
 **Direct files:**
 
 | File | Role |
 |------|------|
-| [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) | Autopilot v3 |
-| [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) | Expert bar for all agents |
+| [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) | Autopilot v4 |
+| [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) | Professor Standard for all agents |
 | [`interactive/plan-wizard/`](interactive/plan-wizard/) | Mouse-selectable Q&A |
 | [`agents/IDEA_RESEARCH_AGENT.md`](agents/IDEA_RESEARCH_AGENT.md) | Research the idea first |
 | [`agents/INTERACTIVE_PLANNER_AGENT.md`](agents/INTERACTIVE_PLANNER_AGENT.md) | One question at a time |

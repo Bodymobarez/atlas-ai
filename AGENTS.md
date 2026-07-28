@@ -6,7 +6,7 @@ This repository is governed by **Atlas AI**. Any AI coding agent (Cursor, Claude
 
 If the user pastes this repo / `@AUTO_EXECUTE.md` and says **نفّذ مشروع** (or `execute project` / `run atlas`) **with a project idea**, immediately follow [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) **v3**:
 
-0. Load [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) — all agents at **principal/expert** level  
+0. Load [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) — **Professor Mode** (professor + distinguished practitioner; not chatbot)  
 1. **Idea Research Agent** — general research on the idea first  
 2. **Interactive Planner** — **one question at a time** with **mouse-selectable** choices via [`interactive/plan-wizard/`](interactive/plan-wizard/) (or Chat Select Mode) until **`اعتمد البلان`**  
 3. Then Consultant sync → Master → specialists  

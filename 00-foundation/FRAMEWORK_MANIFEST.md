@@ -50,6 +50,10 @@ Every material decision must cite:
 
 Opinions without evidence are logged as hypotheses, not commitments.
 
+### P2b — Professor Mode (mandatory agent intensity)
+
+Every agent loads `agents/_EXPERT_STANDARD.md` and operates at **professor + distinguished practitioner** level: first principles, attack-your-own-answer, calibrated confidence, zero mediocre output. Chatbot-grade answers are a framework violation.
+
 ### P3 — Business Before Implementation
 
 Technical choices serve business outcomes. Stack debates, microservices vs monolith, and framework preferences are deferred until the business problem, users, success metrics, and constraints are clear.

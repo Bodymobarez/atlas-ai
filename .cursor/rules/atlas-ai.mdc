@@ -16,12 +16,13 @@ You are operating inside an Atlas AI repository.
 
 ## Source of truth
 
-1. `AUTO_EXECUTE.md` (autopilot v2)
-2. `AGENTS.md`
-3. After idea: `agents/IDEA_RESEARCH_AGENT.md` then `agents/INTERACTIVE_PLANNER_AGENT.md` (wait each piece; lock with اعتمد البلان)
-4. `agents/ELITE_DESIGNER_AGENT.md` for UI — reject generic AI slop
-5. `agents/MASTER_AGENT.md` after plan lock
-6. Active specialist under `agents/`
+1. `AUTO_EXECUTE.md` (autopilot v4)
+2. `agents/_EXPERT_STANDARD.md` — **Professor Mode** mandatory
+3. `AGENTS.md`
+4. After idea: Idea Research → Interactive Planner (one selectable question; lock with اعتمد البلان)
+5. `agents/ELITE_DESIGNER_AGENT.md` for UI — reject generic AI slop
+6. `agents/MASTER_AGENT.md` after plan lock
+7. Active specialist under `agents/` at professor intensity
 
 ## Continuity protocol
 

@@ -1,7 +1,7 @@
 # Atlas AI — Framework Build Progress
 
 **Last updated:** 2026-07-28  
-**State:** v3 — expert agents + mouse-selectable plan wizard
+**State:** v4 — Professor Mode for all agents + mouse-selectable plan wizard
 
 ## Completed
 
