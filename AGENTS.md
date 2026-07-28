@@ -2,6 +2,13 @@
 
 This repository is governed by **Atlas AI**. Any AI coding agent (Cursor, Claude Code, Gemini Code, Copilot, Windsurf, Aider, Continue, Cline, etc.) must follow this file.
 
+## Two modes
+
+| User intent | File |
+|-------------|------|
+| بناء / منتج جديد / `نفّذ مشروع` | [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) + [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) |
+| تطوير / تحسين قائم / `نفّذ تطوير` | [`AUTO_EVOLVE.md`](AUTO_EVOLVE.md) + [`OPEN_IN_CHAT_EVOLVE.md`](OPEN_IN_CHAT_EVOLVE.md) + [`agents/CODEBASE_AUDIT_AGENT.md`](agents/CODEBASE_AUDIT_AGENT.md) |
+
 ## Autopilot (default when user says نفّذ مشروع)
 
 If the user pastes this repo / `@AUTO_EXECUTE.md` and says **نفّذ مشروع** (or `execute project` / `run atlas`) **with a project idea**, immediately follow [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) **v3**:

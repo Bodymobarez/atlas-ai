@@ -30,7 +30,9 @@ Security, performance, accessibility, localization, testing, monitoring, and doc
 | [`agents/IDEA_RESEARCH_AGENT.md`](agents/IDEA_RESEARCH_AGENT.md) | Research the idea first |
 | [`agents/INTERACTIVE_PLANNER_AGENT.md`](agents/INTERACTIVE_PLANNER_AGENT.md) | One question at a time |
 | [`agents/ELITE_DESIGNER_AGENT.md`](agents/ELITE_DESIGNER_AGENT.md) | Premium design |
-| [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) | Copy-paste prompt |
+| [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) | Copy-paste **build** prompt |
+| [`OPEN_IN_CHAT_EVOLVE.md`](OPEN_IN_CHAT_EVOLVE.md) | Copy-paste **evolve/develop** prompt |
+| [`AUTO_EVOLVE.md`](AUTO_EVOLVE.md) | Autopilot for existing projects |
 | [`AGENTS.md`](AGENTS.md) | Universal entrypoint |
 
 ## Manual quick start

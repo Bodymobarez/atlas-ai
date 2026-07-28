@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas AI — معالج التطوير</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <span class="mark">Atlas AI</span>
+        <span class="sub">معالج خطة التطوير</span>
+      </div>
+      <div class="meta">
+        <span id="progressLabel">سؤال 1 / 25</span>
+        <div class="bar" aria-hidden="true"><i id="progressBar"></i></div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <p class="piece" id="pieceLabel">القطعة: P01</p>
+      <h1 id="questionTitle">…</h1>
+      <p class="hint" id="questionHint" hidden></p>
+      <p class="tip" id="researchTip" hidden></p>
+
+      <div class="options" id="options" role="listbox" aria-label="الاختيارات"></div>
+
+      <label class="note-wrap" for="note">
+        ملاحظة إضافية (اختياري)
+        <textarea id="note" rows="2" placeholder="لو اخترت «أخرى» أو حابب توضّح…"></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="button" class="btn ghost" id="btnBack" disabled>السابق</button>
+        <button type="button" class="btn primary" id="btnNext" disabled>التالي</button>
+      </div>
+    </main>
+
+    <section class="summary" id="summary" hidden>
+      <h2>ملخص إجاباتك</h2>
+      <p class="hint">انسخ الناتج والصقه في شات Atlas، أو حمّل الملف.</p>
+      <pre id="summaryOut"></pre>
+      <div class="actions">
+        <button type="button" class="btn primary" id="btnCopy">نسخ للشاحات</button>
+        <button type="button" class="btn ghost" id="btnDownload">تحميل answers.json</button>
+        <button type="button" class="btn ghost" id="btnRestart">إعادة من البداية</button>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>تطوير مشروع قائم · سؤال واحد · بدون كود قبل اعتماد خطة التطوير</span>
+      <a href="../../OPEN_IN_CHAT.md">تعليمات الشات</a>
+    </footer>
+  </div>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
