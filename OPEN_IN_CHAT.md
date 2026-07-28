@@ -1,14 +1,22 @@
 # افتح أي شات جديد والصق هذا
 
-## اللينك المباشر للريبو
+## اللينكات المباشرة
 
-بعد الرفع سيظهر هنا في README — استخدم رابط GitHub للريبو + الملف `AUTO_EXECUTE.md`.
+| ماذا | الرابط |
+|------|--------|
+| الريبو | https://github.com/Bodymobarez/atlas-ai |
+| ملف التشغيل التلقائي | https://github.com/Bodymobarez/atlas-ai/blob/main/AUTO_EXECUTE.md |
+| نص خام للـ Autopilot | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md |
+| جملة النسخ من الريبو | https://github.com/Bodymobarez/atlas-ai/blob/main/OPEN_IN_CHAT.md |
+
+**أفضل استخدام في Cursor:** `git clone https://github.com/Bodymobarez/atlas-ai.git` ثم افتح المجلد، أو ابدأ شات جديد والصق الجملة تحت.
 
 ## الجملة السحرية (انسخ كما هي)
 
 ```text
 Repo: https://github.com/Bodymobarez/atlas-ai
-Read AUTO_EXECUTE.md and AGENTS.md first.
+Read https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md
+and https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AGENTS.md first.
 نفّذ مشروع
 
 الفكرة:
