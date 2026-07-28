@@ -51,11 +51,17 @@ Rules:
 
 ---
 
-## معالج الاختيار بالماوس
+## معالج الاختيار بالماوس (v2)
 
 ```bash
+git clone https://github.com/Bodymobarez/atlas-ai.git   # إن لم يكن موجودًا
 cd atlas-ai/interactive/evolve-wizard
 python3 -m http.server 8766
 ```
 
-http://localhost:8766
+افتح http://localhost:8766  
+
+1. اكتب طلب التطوير  
+2. جاوب سؤال سؤال بالضغط  
+3. **نسخ للشاحات** أو حمّل `CHANGE_PLAN.md`  
+4. الصق في الشات (مع الجملة أعلاه)

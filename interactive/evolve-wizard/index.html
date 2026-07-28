@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Atlas AI — معالج التطوير</title>
+  <title>Atlas AI — معالج التطوير v2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,48 +13,86 @@
   <div class="app">
     <header class="top">
       <div class="brand">
+        <span class="badge">EVOLVE</span>
         <span class="mark">Atlas AI</span>
-        <span class="sub">معالج خطة التطوير</span>
+        <span class="sub">معالج خطة التطوير · v2</span>
       </div>
       <div class="meta">
-        <span id="progressLabel">سؤال 1 / 25</span>
+        <span id="progressLabel">جاهز</span>
         <div class="bar" aria-hidden="true"><i id="progressBar"></i></div>
       </div>
     </header>
 
-    <main class="stage">
-      <p class="piece" id="pieceLabel">القطعة: P01</p>
-      <h1 id="questionTitle">…</h1>
-      <p class="hint" id="questionHint" hidden></p>
-      <p class="tip" id="researchTip" hidden></p>
+    <nav class="pieces" id="pieceNav" aria-label="قطع الخطة"></nav>
 
-      <div class="options" id="options" role="listbox" aria-label="الاختيارات"></div>
+    <!-- Welcome / request -->
+    <section class="panel" id="welcome">
+      <h1>تطوير مشروع قائم</h1>
+      <p class="hint">
+        مش بناء من الصفر. اكتب طلب التطوير، ثم جاوب <strong>سؤال سؤال</strong> بالضغط على الاختيارات.
+        في الآخر انسخ الناتج والصقه في شات Atlas مع <code>AUTO_EVOLVE</code>.
+      </p>
 
-      <label class="note-wrap" for="note">
-        ملاحظة إضافية (اختياري)
-        <textarea id="note" rows="2" placeholder="لو اخترت «أخرى» أو حابب توضّح…"></textarea>
+      <label class="field">
+        <span>وصف طلب التطوير</span>
+        <textarea id="changeRequest" rows="5" placeholder="مثال: أضف تصدير Excel لصفحة الحضور مع فلتر بالتاريخ، بدون تغيير صلاحيات الأدمن…"></textarea>
+      </label>
+
+      <label class="field">
+        <span>قيود سريعة (اختياري)</span>
+        <textarea id="constraints" rows="2" placeholder="لا تلمس الدفع / لازم يشتغل على الموبايل / قبل الجمعة…"></textarea>
       </label>
 
       <div class="actions">
-        <button type="button" class="btn ghost" id="btnBack" disabled>السابق</button>
+        <button type="button" class="btn primary" id="btnStart">ابدأ الأسئلة</button>
+        <label class="btn ghost file-btn">
+          استيراد إجابات JSON
+          <input type="file" id="importFile" accept="application/json,.json" hidden />
+        </label>
+      </div>
+      <p class="tip" id="welcomeTip">اختصارات: A–G للاختيار · Enter للتالي · Esc للملخص بعد الإنهاء</p>
+    </section>
+
+    <!-- Questions -->
+    <main class="panel stage" id="stage" hidden>
+      <p class="piece" id="pieceLabel">القطعة</p>
+      <h1 id="questionTitle">…</h1>
+      <p class="hint" id="questionHint" hidden></p>
+      <p class="tip" id="researchTip" hidden></p>
+      <p class="multi-hint" id="multiHint" hidden>يمكنك اختيار أكثر من إجابة — ثم اضغط التالي</p>
+
+      <div class="options" id="options" role="listbox" aria-label="الاختيارات"></div>
+
+      <label class="field" for="note">
+        <span>ملاحظة إضافية (اختياري)</span>
+        <textarea id="note" rows="2" placeholder="تفاصيل، استثناءات، أسماء شاشات/ملفات…"></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="button" class="btn ghost" id="btnBack">السابق</button>
+        <button type="button" class="btn ghost" id="btnHome">الطلب</button>
         <button type="button" class="btn primary" id="btnNext" disabled>التالي</button>
       </div>
     </main>
 
-    <section class="summary" id="summary" hidden>
-      <h2>ملخص إجاباتك</h2>
-      <p class="hint">انسخ الناتج والصقه في شات Atlas، أو حمّل الملف.</p>
+    <!-- Summary -->
+    <section class="panel summary" id="summary" hidden>
+      <h2>ملخص خطة التطوير</h2>
+      <p class="hint" id="lockBanner"></p>
+      <div class="summary-cards" id="summaryCards"></div>
       <pre id="summaryOut"></pre>
       <div class="actions">
         <button type="button" class="btn primary" id="btnCopy">نسخ للشاحات</button>
-        <button type="button" class="btn ghost" id="btnDownload">تحميل answers.json</button>
+        <button type="button" class="btn ghost" id="btnDownloadMd">تحميل CHANGE_PLAN.md</button>
+        <button type="button" class="btn ghost" id="btnDownload">تحميل JSON</button>
+        <button type="button" class="btn ghost" id="btnEdit">تعديل الإجابات</button>
         <button type="button" class="btn ghost" id="btnRestart">إعادة من البداية</button>
       </div>
     </section>
 
     <footer class="foot">
-      <span>تطوير مشروع قائم · سؤال واحد · بدون كود قبل اعتماد خطة التطوير</span>
-      <a href="../../OPEN_IN_CHAT.md">تعليمات الشات</a>
+      <span>Professor Mode · أصغر تغيير صحيح · بدون كود قبل الاعتماد</span>
+      <a href="../../OPEN_IN_CHAT_EVOLVE.md">جملة شات التطوير</a>
     </footer>
   </div>
   <script src="questions.js"></script>

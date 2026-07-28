@@ -39,8 +39,12 @@ Read `agents/_EXPERT_STANDARD.md` first. Same Professor Mode rules as build.
 1. **Inspect before changing** — map the real codebase; never invent architecture that isn’t there.  
 2. **No drive-by rewrite** — strangler/incremental unless user locks “إعادة بناء”.  
 3. **One selectable question at a time** during change planning.  
-4. Prefer wizard: `interactive/evolve-wizard/` (or chat A/B/C).  
-5. Wait for **`اعتمد خطة التطوير`** before implementation.  
+4. Prefer wizard **v2**: `interactive/evolve-wizard/`  
+   (`cd interactive/evolve-wizard && python3 -m http.server 8766` → http://localhost:8766)  
+   Features: change-request screen, multi-select, recommended badges, skip logic, CHANGE_PLAN.md export.  
+   Fallback: chat A/B/C one question at a time.  
+5. Wait for **`اعتمد خطة التطوير`** / `EVOLVE_LOCK` before implementation.  
+   Ingest paste starting with `ATLAS_EVOLVE_WIZARD_EXPORT`.  
 6. Tests + security + a11y + i18n + docs defaults for touched surfaces.  
 7. Continuity: finish file → `NEXT FILE:path` → `CONTINUE`.  
 

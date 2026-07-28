@@ -1,112 +1,259 @@
+/* Atlas AI — Evolve Wizard Question Bank v2
+ * Developing an EXISTING project (not greenfield).
+ * Supports: recommended, multi, skipIf
+ */
+window.ATLAS_EVOLVE_META = {
+  version: 2,
+  mode: "evolve",
+  title: "معالج خطة التطوير",
+  lockPhrase: "اعتمد خطة التطوير",
+};
+
+window.ATLAS_EVOLVE_PIECES = [
+  { id: "INTRO", label: "الطلب" },
+  { id: "GOAL", label: "الهدف" },
+  { id: "SCOPE", label: "النطاق" },
+  { id: "APPROACH", label: "الأسلوب" },
+  { id: "SURFACE", label: "الأسطح" },
+  { id: "RISK", label: "المخاطر" },
+  { id: "UI", label: "الواجهة" },
+  { id: "DATA", label: "البيانات" },
+  { id: "QUALITY", label: "الجودة" },
+  { id: "VERIFY", label: "التحقق" },
+  { id: "LOCK", label: "الاعتماد" },
+];
+
 window.ATLAS_EVOLVE_QUESTIONS = [
   {
     id: "E01",
     piece: "GOAL",
     title: "ما هدف التطوير الأساسي؟",
+    hint: "اختَر أقرب هدف. التفاصيل تُكتب في وصف الطلب بالأعلى.",
+    researchTip: "بعد تدقيق الكود (Codebase Audit) لازم الهدف يطابق واقع المشروع.",
+    recommended: "A",
     options: [
       { id: "A", label: "إضافة ميزة جديدة" },
       { id: "B", label: "تحسين / إصلاح سلوك موجود" },
       { id: "C", label: "إعادة تصميم UI/UX" },
       { id: "D", label: "أداء / استقرار / أمان" },
-      { id: "E", label: "دين تقني / refactor محسوب" }
-    ]
+      { id: "E", label: "دين تقني / refactor محسوب" },
+      { id: "F", label: "تكامل مع نظام خارجي" },
+    ],
   },
   {
     id: "E02",
     piece: "GOAL",
     title: "ما مقياس النجاح بعد التطوير؟",
+    recommended: "A",
     options: [
       { id: "A", label: "المستخدم يكمّل سيناريو محدد بنجاح" },
       { id: "B", label: "خطأ/عطل يختفي أو يقل بشكل واضح" },
       { id: "C", label: "سرعة/أداء أفضل بمقياس واضح" },
-      { id: "D", label: "جاهزية إطلاق / قبول أصحاب المصلحة" }
-    ]
+      { id: "D", label: "جاهزية إطلاق / قبول أصحاب المصلحة" },
+      { id: "E", label: "تقليل تكلفة تشغيل / تعقيد" },
+    ],
   },
   {
     id: "E03",
-    piece: "SCOPE",
-    title: "حجم التغيير المسموح؟",
+    piece: "GOAL",
+    title: "أولوية هذا التغيير؟",
+    recommended: "B",
     options: [
-      { id: "A", label: "صغير جدًا — أقل فرق صحيح" },
-      { id: "B", label: "متوسط — شريحة عمودية كاملة" },
-      { id: "C", label: "كبير — عدة شرائح (على مراحل)" },
-      { id: "D", label: "إعادة بناء جزء كبير (يحتاج تأكيد صريح لاحقًا)" }
-    ]
+      { id: "A", label: "حرج — يكسر عمل أو إيراد الآن" },
+      { id: "B", label: "عالي — مهم لهذا السباق/الإصدار" },
+      { id: "C", label: "متوسط — يحسّن الجودة" },
+      { id: "D", label: "منخفض — تحسين اختياري" },
+    ],
   },
   {
     id: "E04",
     piece: "SCOPE",
-    title: "ماذا خارج النطاق صراحةً؟",
+    title: "حجم التغيير المسموح في هذه الجولة؟",
+    recommended: "A",
+    researchTip: "في التطوير: الأصغر الصحيح عادةً يفوز — إلا لو اتفقتوا على مرحلة أكبر.",
     options: [
-      { id: "A", label: "لا تغيّر الديزاين العام" },
-      { id: "B", label: "لا تغيّر قاعدة البيانات / المخطط" },
-      { id: "C", label: "لا تلمس الدفع / الصلاحيات الحساسة" },
-      { id: "D", label: "لا إعادة كتابة المعمارية" },
-      { id: "E", label: "سأحدد في الملاحظة" }
-    ]
+      { id: "A", label: "صغير جدًا — أقل فرق صحيح" },
+      { id: "B", label: "متوسط — شريحة عمودية كاملة" },
+      { id: "C", label: "كبير — عدة شرائح على مراحل" },
+      { id: "D", label: "إعادة بناء جزء كبير (يحتاج تأكيد صريح)" },
+    ],
   },
   {
     id: "E05",
-    piece: "APPROACH",
-    title: "أسلوب التنفيذ المفضّل؟",
+    piece: "SCOPE",
+    title: "ماذا خارج النطاق؟ (يمكن اختيار أكثر من بند)",
+    multi: true,
+    hint: "اضغط كل ما ينطبق. هذا يحمي المشروع من توسّع زاحف.",
+    recommended: ["A", "D"],
     options: [
-      { id: "A", label: "امتداد للأنماط الحالية حرفيًا" },
-      { id: "B", label: "تحسين موضعي مع تنظيف بسيط حول التغيير" },
-      { id: "C", label: "Strangler: جديد بجانب القديم ثم تحويل" },
-      { id: "D", label: "إعادة بناء متحكم بها لجزء محدد فقط" }
-    ]
+      { id: "A", label: "لا تغيّر الديزاين العام" },
+      { id: "B", label: "لا تغيّر مخطط قاعدة البيانات" },
+      { id: "C", label: "لا تلمس الدفع / الصلاحيات الحساسة" },
+      { id: "D", label: "لا إعادة كتابة المعمارية" },
+      { id: "E", label: "لا تغيّر عقود API العامة" },
+      { id: "F", label: "لا تضيف تبعيات ثقيلة جديدة" },
+      { id: "G", label: "سأحدد استثناءات في الملاحظة" },
+    ],
   },
   {
     id: "E06",
-    piece: "RISK",
-    title: "تحمل المخاطر؟",
+    piece: "APPROACH",
+    title: "أسلوب التنفيذ المفضّل؟",
+    recommended: "A",
     options: [
-      { id: "A", label: "منخفض — إنتاج حساس، حذر أقصى" },
-      { id: "B", label: "متوسط — اختبارات جيدة كافية" },
-      { id: "C", label: "أعلى — نحتاج سرعة مع مراقبة" }
-    ]
+      { id: "A", label: "امتداد للأنماط الحالية حرفيًا" },
+      { id: "B", label: "تحسين موضعي + تنظيف بسيط حول التغيير فقط" },
+      { id: "C", label: "Strangler: جديد بجانب القديم ثم تحويل" },
+      { id: "D", label: "إعادة بناء متحكم بها لجزء محدد فقط" },
+    ],
   },
   {
     id: "E07",
+    piece: "APPROACH",
+    title: "هل نستخدم Feature Flag؟",
+    recommended: "B",
+    options: [
+      { id: "A", label: "نعم — إلزامي قبل تعميم التغيير" },
+      { id: "B", label: "إذا كان المسار حساسًا فقط" },
+      { id: "C", label: "لا — تغيير مباشر بعد التحقق" },
+      { id: "D", label: "غير متأكد — قرر بعد الـ Impact" },
+    ],
+  },
+  {
+    id: "E08",
+    piece: "SURFACE",
+    title: "أين يظهر التغيير؟ (متعدد)",
+    multi: true,
+    recommended: ["A"],
+    options: [
+      { id: "A", label: "Backend / خدمات" },
+      { id: "B", label: "Frontend ويب" },
+      { id: "C", label: "Mobile" },
+      { id: "D", label: "API عقود / توثيق" },
+      { id: "E", label: "قاعدة بيانات" },
+      { id: "F", label: "DevOps / CI / Deploy" },
+      { id: "G", label: "AI / نماذج" },
+    ],
+  },
+  {
+    id: "E09",
+    piece: "RISK",
+    title: "تحمل المخاطر لهذه الجولة؟",
+    recommended: "A",
+    options: [
+      { id: "A", label: "منخفض — إنتاج حساس، حذر أقصى" },
+      { id: "B", label: "متوسط — اختبارات جيدة كافية" },
+      { id: "C", label: "أعلى — سرعة مع مراقبة مشددة" },
+    ],
+  },
+  {
+    id: "E10",
+    piece: "RISK",
+    title: "خطة التراجع (Rollback)؟",
+    recommended: "A",
+    options: [
+      { id: "A", label: "لازم تكون جاهزة قبل الدمج" },
+      { id: "B", label: "Forward-fix مقبول إن كان آمنًا" },
+      { id: "C", label: "تغيير تجميلي/منخفض الخطر — تراجع بسيط" },
+      { id: "D", label: "غير متأكد — صمّمها في Impact" },
+    ],
+  },
+  {
+    id: "E11",
     piece: "UI",
     title: "هل التغيير يمس الواجهة؟",
+    recommended: "B",
     options: [
       { id: "A", label: "لا UI" },
       { id: "B", label: "UI بسيط ضمن الديزاين الحالي" },
       { id: "C", label: "UI مهم — فعّل Elite Designer" },
-      { id: "D", label: "إعادة تصميم شاشات أساسية" }
-    ]
+      { id: "D", label: "إعادة تصميم شاشات أساسية" },
+    ],
   },
   {
-    id: "E08",
+    id: "E12",
+    piece: "UI",
+    title: "مستوى جودة الواجهة المطلوب؟",
+    skipIf: { questionId: "E11", optionIds: ["A"] },
+    recommended: "B",
+    options: [
+      { id: "A", label: "وظيفي فقط — لا تلميع" },
+      { id: "B", label: "متسق مع الديزاين الحالي + حالات فارغة/خطأ" },
+      { id: "C", label: "Professor / Elite — أول تمريرة فاخرة" },
+    ],
+  },
+  {
+    id: "E13",
     piece: "DATA",
-    title: "هل فيه ترحيل بيانات / كسر توافق؟",
+    title: "هل فيه ترحيل بيانات أو كسر توافق؟",
+    recommended: "A",
     options: [
       { id: "A", label: "لا" },
-      { id: "B", label: "ممكن — نحتاج expand/contract" },
+      { id: "B", label: "ممكن — expand/contract" },
       { id: "C", label: "نعم مؤكد — خطّة ترحيل إلزامية" },
-      { id: "D", label: "غير متأكد — راجع أثناء التحليل" }
-    ]
+      { id: "D", label: "غير متأكد — راجع أثناء التحليل" },
+    ],
   },
   {
-    id: "E09",
+    id: "E14",
+    piece: "DATA",
+    title: "حساسية البيانات في مسار التغيير؟",
+    recommended: "B",
+    options: [
+      { id: "A", label: "عادية" },
+      { id: "B", label: "PII / خصوصية" },
+      { id: "C", label: "مدفوعات / مالية" },
+      { id: "D", label: "صلاحيات / أمن حساس" },
+      { id: "E", label: "لا ينطبق" },
+    ],
+  },
+  {
+    id: "E15",
+    piece: "QUALITY",
+    title: "متطلبات الجودة الافتراضية لهذه الجولة؟ (متعدد)",
+    multi: true,
+    recommended: ["A", "B", "C"],
+    options: [
+      { id: "A", label: "اختبارات للسلوك الجديد/المعدَّل" },
+      { id: "B", label: "مراجعة أمان للمسارات الحساسة إن وُجدت" },
+      { id: "C", label: "عدم كسر الوصول (a11y) في UI" },
+      { id: "D", label: "احترام i18n / عدم نص صلب إن كان المشروع متعدد اللغات" },
+      { id: "E", label: "تحديث توثيق/README إن تغيّر السلوك" },
+    ],
+  },
+  {
+    id: "E16",
     piece: "VERIFY",
     title: "كيف نتحقق بعد التنفيذ؟",
+    recommended: "A",
     options: [
       { id: "A", label: "اختبارات تلقائية + سيناريو يدوي قصير" },
       { id: "B", label: "سيناريو يدوي أساسي فقط" },
       { id: "C", label: "اختبارات + مراجعة أمان للمسار الحساس" },
-      { id: "D", label: "أخرى — في الملاحظة" }
-    ]
+      { id: "D", label: "تحقق مرحلي خلف Feature Flag" },
+    ],
   },
   {
-    id: "E10",
+    id: "E17",
+    piece: "VERIFY",
+    title: "متى نعتبر الجولة منتهية؟",
+    recommended: "A",
+    options: [
+      { id: "A", label: "الكود + الاختبارات + تقرير تحقق" },
+      { id: "B", label: "دمج في الفرع الرئيسي فقط" },
+      { id: "C", label: "نشر staging جاهز للتجربة" },
+      { id: "D", label: "إنتاج — فقط إذا طلبت ذلك صراحة" },
+    ],
+  },
+  {
+    id: "E18",
     piece: "LOCK",
     title: "اعتماد خطة التطوير",
+    hint: "بعد المراجعة في الملخص: اعتمد للسماح للوكيل بالتنفيذ حسب AUTO_EVOLVE.",
     options: [
       { id: "A", label: "اعتمد خطة التطوير — ابدأ التنفيذ" },
-      { id: "B", label: "راجع — تعديل إجابات" },
-      { id: "C", label: "مسودة فقط — بدون تنفيذ" }
-    ]
-  }
+      { id: "B", label: "راجع — أريد تعديل إجابات" },
+      { id: "C", label: "حفظ كمسودة فقط (بدون تنفيذ)" },
+    ],
+  },
 ];
