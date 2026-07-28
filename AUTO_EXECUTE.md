@@ -1,8 +1,8 @@
 # Atlas AI — AUTO EXECUTE (Autopilot)
 
-**Version:** 2.0.0  
+**Version:** 3.0.0  
 **Purpose:** User pastes repo link + idea + **نفّذ مشروع** → agent self-activates the pipeline.  
-**v2 change:** Idea Research first → Interactive Plan **piece-by-piece with the user** → only then execute. Elite Designer leads all UI.
+**v3:** Expert-level agents (`_EXPERT_STANDARD.md`) · Idea Research first · Plan via **mouse-selectable** wizard (one question at a time) · Elite Designer for UI.
 
 ---
 
@@ -18,10 +18,14 @@ You self-activate agents. **You do NOT skip the human planning conversation.**
 
 ### Must STOP and wait for the user
 
-1. After Idea Research summary → start Interactive Planner piece 1  
-2. **After every plan piece** → wait for answers → lock piece → next piece  
-3. After full plan → wait for **`اعتمد البلان`** / `lock plan`  
+1. After Idea Research summary → open Plan Wizard **or** ask **question 1 only** with A/B/C choices  
+2. **After every single question** → wait for selection → confirm → next question (never batch)  
+3. After full plan → wait for **`اعتمد البلان`** / wizard `PLAN_LOCK`  
 4. Never write product application code before G8  
+
+### Expert bar
+
+Before any agent acts: read `agents/_EXPERT_STANDARD.md`. No junior-level generic answers.
 
 ### May proceed without asking (after plan locked)
 
@@ -56,13 +60,16 @@ Context full → finish current file → `NEXT FILE:path` → on `CONTINUE` resu
    - Close G-IR
    - DO NOT ask the full plan yet
 
-2. INTERACTIVE PLANNER  ← piece by piece WITH USER (NEW)
+2. INTERACTIVE PLANNER  ← selectable Q&A WITH USER
    - Read agents/INTERACTIVE_PLANNER_AGENT.md
-   - For each piece P01…P11:
-       research insight → propose options → ask 3–6 questions → WAIT
-       → confirm → write docs/plan/pieces/… → show progress
+   - Offer Plan Wizard first:
+       interactive/plan-wizard/index.html
+       (cd interactive/plan-wizard && python3 -m http.server 8765)
+   - OR Chat Select Mode: ONE question per message with A/B/C clickable choices — WAIT
+   - Never ask multiple planning questions in one turn
+   - Ingest ATLAS_PLAN_WIZARD_EXPORT when pasted
    - Assemble docs/plan/COMPLETE_PLAN.md
-   - WAIT for: اعتمد البلان
+   - WAIT for: اعتمد البلان / PLAN_LOCK
    - Close G-PLAN
    - *** HARD STOP until plan is LOCKED ***
 

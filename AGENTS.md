@@ -4,15 +4,16 @@ This repository is governed by **Atlas AI**. Any AI coding agent (Cursor, Claude
 
 ## Autopilot (default when user says نفّذ مشروع)
 
-If the user pastes this repo / `@AUTO_EXECUTE.md` and says **نفّذ مشروع** (or `execute project` / `run atlas`) **with a project idea**, immediately follow [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) **v2**:
+If the user pastes this repo / `@AUTO_EXECUTE.md` and says **نفّذ مشروع** (or `execute project` / `run atlas`) **with a project idea**, immediately follow [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) **v3**:
 
+0. Load [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) — all agents at **principal/expert** level  
 1. **Idea Research Agent** — general research on the idea first  
-2. **Interactive Planner** — build the plan **piece by piece with the user** (WAIT each piece) until **`اعتمد البلان`**  
+2. **Interactive Planner** — **one question at a time** with **mouse-selectable** choices via [`interactive/plan-wizard/`](interactive/plan-wizard/) (or Chat Select Mode) until **`اعتمد البلان`**  
 3. Then Consultant sync → Master → specialists  
 4. **Elite Designer Agent** leads all UI (no generic AI look)  
 5. No product code until G8, then MVP  
 
-Do **not** skip research or interactive planning. Do **not** ask all plan questions in one dump.
+Do **not** skip research or interactive planning. Do **not** ask multiple plan questions in one message.
 
 ## Mandatory reading order
 

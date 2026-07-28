@@ -8,28 +8,30 @@ Atlas AI prevents premature coding. Every product run must complete discovery, r
 
 Security, performance, accessibility, localization, testing, monitoring, and documentation are **defaults**.
 
-## One-shot autopilot (recommended) — v2
+## One-shot autopilot (recommended) — v3
 
 1. Open **any new AI chat** (Cursor / Claude Code / Gemini / Copilot Chat…)
-2. Paste the magic block from [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) (repo link + `نفّذ مشروع` + your idea)
-3. The agent must read [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) and:
+2. Paste the magic block from [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md)
+3. The agent reads [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) and:
 
-   - **Idea Research** first (general research on your idea)  
-   - **Interactive Planner** — builds the plan **piece by piece with you** until you say **`اعتمد البلان`**  
-   - Then Master + specialists  
-   - **Elite Designer** for premium UI (not generic AI UI)  
+   - Loads [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) — **expert/principal** bar for every agent  
+   - **Idea Research** first  
+   - **Plan Wizard** ([`interactive/plan-wizard/`](interactive/plan-wizard/)) — **one question**, **click to select**  
+   - Then Master + specialists + **Elite Designer**  
    - Build MVP only after G8  
 
 **Direct files:**
 
 | File | Role |
 |------|------|
-| [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) | Autopilot brain v2 |
+| [`AUTO_EXECUTE.md`](AUTO_EXECUTE.md) | Autopilot v3 |
+| [`agents/_EXPERT_STANDARD.md`](agents/_EXPERT_STANDARD.md) | Expert bar for all agents |
+| [`interactive/plan-wizard/`](interactive/plan-wizard/) | Mouse-selectable Q&A |
 | [`agents/IDEA_RESEARCH_AGENT.md`](agents/IDEA_RESEARCH_AGENT.md) | Research the idea first |
-| [`agents/INTERACTIVE_PLANNER_AGENT.md`](agents/INTERACTIVE_PLANNER_AGENT.md) | Plan piece-by-piece |
-| [`agents/ELITE_DESIGNER_AGENT.md`](agents/ELITE_DESIGNER_AGENT.md) | World-class design first pass |
+| [`agents/INTERACTIVE_PLANNER_AGENT.md`](agents/INTERACTIVE_PLANNER_AGENT.md) | One question at a time |
+| [`agents/ELITE_DESIGNER_AGENT.md`](agents/ELITE_DESIGNER_AGENT.md) | Premium design |
 | [`OPEN_IN_CHAT.md`](OPEN_IN_CHAT.md) | Copy-paste prompt |
-| [`AGENTS.md`](AGENTS.md) | Universal agent entrypoint |
+| [`AGENTS.md`](AGENTS.md) | Universal entrypoint |
 
 ## Manual quick start
 

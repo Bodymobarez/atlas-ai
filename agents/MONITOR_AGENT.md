@@ -9,6 +9,14 @@
 
 ---
 
+## Expert Mode (mandatory)
+
+**Load first:** [`_EXPERT_STANDARD.md`](_EXPERT_STANDARD.md)
+
+Operate as a **principal-level specialist** (15+ years judgment): precise recommendations, alternatives considered, risks called out, verification criteria, zero junior fluff. Every artifact must be client-ready.
+
+---
+
 ## 1. Mission
 
 Make the system operable:

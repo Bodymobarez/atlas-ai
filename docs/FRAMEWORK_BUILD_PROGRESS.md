@@ -1,7 +1,7 @@
 # Atlas AI — Framework Build Progress
 
 **Last updated:** 2026-07-28  
-**State:** Core framework delivered + v2 autopilot (research → interactive plan → elite design)
+**State:** v3 — expert agents + mouse-selectable plan wizard
 
 ## Completed
 

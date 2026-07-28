@@ -5,35 +5,35 @@
 | ماذا | الرابط |
 |------|--------|
 | الريبو | https://github.com/Bodymobarez/atlas-ai |
-| Autopilot | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md |
-| Idea Research | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/IDEA_RESEARCH_AGENT.md |
-| Interactive Planner | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/INTERACTIVE_PLANNER_AGENT.md |
-| Elite Designer | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/ELITE_DESIGNER_AGENT.md |
+| Autopilot v3 | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md |
+| معيار الخبرة | https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/_EXPERT_STANDARD.md |
+| معالج البلان (اختيار بالماوس) | https://github.com/Bodymobarez/atlas-ai/tree/main/interactive/plan-wizard |
 
 ## الجملة السحرية
 
 ```text
 Repo: https://github.com/Bodymobarez/atlas-ai
-Read https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AUTO_EXECUTE.md
-and https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/AGENTS.md first.
+Read AUTO_EXECUTE.md, AGENTS.md, and agents/_EXPERT_STANDARD.md first.
 نفّذ مشروع
 
 الفكرة:
-<<< اكتب فكرة مشروعك هنا بالتفصيل >>>
-
-قيود (اختياري):
-- المنصات:
-- الميزانية/الوقت:
-- اللغة/الدول:
+<<< اكتب فكرة مشروعك هنا >>>
 ```
 
-## ماذا سيحدث الآن (v2)
+## التدفق المتوقع (v3)
 
-1. **ريسيرش عام** على الفكرة (سوق / منافسين / مخاطر / اتجاه ديزاين)  
-2. ملخص البحث لك  
-3. بناء **البلان قطعة قطعة** — يسألك وتجاوب لحد ما تكتمل  
-4. لما تكتب **`اعتمد البلان`** يبدأ التنفيذ الرسمي  
-5. **Elite Designer** يعمل ديزاين عالي من أول مرة (مش UI عادي)  
-6. بعد التفويض (G8) يتبني الـ MVP  
+1. **ريسيرش عام** على الفكرة (مستوى خبير)  
+2. يفتح لك **معالج البلان** أو يسألك **سؤال واحد** باختيارات A/B/C للضغط/الاختيار  
+3. تكمّل الأسئلة → **اعتمد البلان**  
+4. باقي الوكلاء (كلهم Expert Mode) + **Elite Designer**  
+5. التنفيذ بعد G8  
 
-لو السياق امتلأ: `NEXT FILE:...` ثم اكتب `CONTINUE`.
+### تشغيل معالج البلان محليًا
+
+```bash
+git clone https://github.com/Bodymobarez/atlas-ai.git
+cd atlas-ai/interactive/plan-wizard
+python3 -m http.server 8765
+```
+
+افتح http://localhost:8765 — اختَر بالماوس — انسخ الناتج للشات.

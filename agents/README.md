@@ -1,6 +1,10 @@
 # Atlas AI — Agents Index
 
+**Every agent:** load [`_EXPERT_STANDARD.md`](_EXPERT_STANDARD.md) first (principal/expert bar).
+
 Activate via `AUTO_EXECUTE.md` / Master Agent sequencing.
+
+**Planning UI:** [`../interactive/plan-wizard/`](../interactive/plan-wizard/) — one question, mouse-select choices.
 
 ## Front of funnel (before implementation)
 
