@@ -304,9 +304,36 @@ window.ATLAS_QUESTIONS = [
     ]
   },
 
-  /* —— LOCK —— */
+  /* —— INTEGRATIONS —— */
   {
     id: "Q25",
+    piece: "P08_CONSTRAINTS",
+    title: "هل الـ MVP يحتاج ربط منصات خارجية؟",
+    hint: "مدفوعات، واتساب، SSO، Slack، خرائط، AI…",
+    options: [
+      { id: "A", label: "لا — مستقل قدر الإمكان" },
+      { id: "B", label: "نعم — تكامل واحد أساسي" },
+      { id: "C", label: "نعم — عدة تكاملات" },
+      { id: "D", label: "لاحقًا — ليس في MVP" }
+    ]
+  },
+  {
+    id: "Q26",
+    piece: "P08_CONSTRAINTS",
+    title: "أنواع الربط الأهم للـ MVP؟ (اختَر الأقرب)",
+    options: [
+      { id: "A", label: "REST/API + Webhooks" },
+      { id: "B", label: "OAuth / SSO" },
+      { id: "C", label: "SDK مضمّن (دفع/خرائط/تحليلات)" },
+      { id: "D", label: "MCP / أدوات AI" },
+      { id: "E", label: "مزيج — أوضّح في الملاحظة" },
+      { id: "F", label: "لا ينطبق" }
+    ]
+  },
+
+  /* —— LOCK —— */
+  {
+    id: "Q27",
     piece: "P12_LOCK",
     title: "اعتماد البلان",
     hint: "بعد المراجعة في الملخص: اعتمد للبدء في التنفيذ الرسمي (بعد G8 لاحقًا).",

@@ -80,6 +80,11 @@ Read `agents/_EXPERT_STANDARD.md` first. Same Professor Mode rules as build.
 
 4. IMPACT PACK (after lock — still careful)
    - Architect: impact on boundaries/ADRs
+   - Integrations Agent if external links in scope:
+       agents/INTEGRATIONS_AGENT.md
+       modules/integrations/CONNECTION_TYPES.md
+       modules/integrations/PLATFORMS_CATALOG.md
+       → docs/integrations/MATRIX.md
    - Security / Perf / A11y / i18n / Cost as relevant to the change
    - Test/QA: regression plan
    - Elite Designer ONLY if UI is in scope

@@ -37,6 +37,7 @@ Activate via `AUTO_EXECUTE.md` / Master Agent sequencing.
 | | [FRONTEND_AGENT.md](FRONTEND_AGENT.md) | Web (implements Elite) |
 | | [MOBILE_AGENT.md](MOBILE_AGENT.md) | Mobile |
 | | [API_AGENT.md](API_AGENT.md) | Contracts |
+| | [INTEGRATIONS_AGENT.md](INTEGRATIONS_AGENT.md) | All connection types × platforms |
 | | [AI_AGENT.md](AI_AGENT.md) | LLM/ML |
 | | [SECURITY_AGENT.md](SECURITY_AGENT.md) | Security |
 | | [QA_AGENT.md](QA_AGENT.md) | Quality |

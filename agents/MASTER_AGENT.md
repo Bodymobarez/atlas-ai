@@ -93,7 +93,7 @@ PHASE 3  Business Clarity            → BUSINESS_ANALYST
 PHASE 4  Product Definition          → PRODUCT_MANAGER
 PHASE 5  Architecture                → SYSTEM_ARCHITECT
          >>> HUMAN GATE: Architecture & MVP Approval <<<
-PHASE 6  Data & Contracts Design     → DATABASE_AGENT, API_AGENT (design only)
+PHASE 6  Data & Contracts Design     → DATABASE_AGENT, API_AGENT, INTEGRATIONS_AGENT (design only)
 PHASE 7  Experience Design           → ELITE_DESIGNER_AGENT (LEADS),
                                        then UX_AGENT, DESIGN_SYSTEM_AGENT, UI_AGENT
          >>> G6 requires Elite anti-slop pass for UI products <<<

@@ -291,8 +291,8 @@
   }
 
   function lockState() {
-    const lock = state.answers.E18;
-    if (!lock) return "none";
+    const lock = state.answers.E22;
+    if (!lock || !lock.optionId) return "none";
     if (lock.optionId === "A") return "approved";
     if (lock.optionId === "B") return "revise";
     if (lock.optionId === "C") return "draft";
@@ -371,6 +371,8 @@
       ["الحجم", answerLine(state.answers.E04)],
       ["الأسلوب", answerLine(state.answers.E06)],
       ["UI", answerLine(state.answers.E11)],
+      ["الربط", answerLine(state.answers.E18)],
+      ["أنواع الربط", answerLine(state.answers.E19)],
       ["التحقق", answerLine(state.answers.E16)],
     ];
     highlights.forEach(([k, v]) => {

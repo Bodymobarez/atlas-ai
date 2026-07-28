@@ -17,6 +17,9 @@ Read these files first (in order):
 3) https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/_EXPERT_STANDARD.md
 4) https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/CODEBASE_AUDIT_AGENT.md
 5) https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/ELITE_DESIGNER_AGENT.md
+6) https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/agents/INTEGRATIONS_AGENT.md
+7) https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/modules/integrations/CONNECTION_TYPES.md
+8) https://raw.githubusercontent.com/Bodymobarez/atlas-ai/main/modules/integrations/PLATFORMS_CATALOG.md
 
 This is DEVELOP / EVOLVE mode — NOT greenfield build.
 Do NOT follow AUTO_EXECUTE.md (that is for new products).
@@ -33,7 +36,7 @@ Rules:
 - Prefer smallest correct change; no full rewrite unless I lock that explicitly.
 - Match existing patterns/style. No unrelated refactors.
 - Wait for me to say: اعتمد خطة التطوير
-- After lock: impact pack (architecture/security/tests; Elite Designer only if UI in scope) → authorize slice → implement → verify → report.
+- After lock: impact pack (architecture/security/tests; Integrations Agent if any external link — use CONNECTION_TYPES + PLATFORMS_CATALOG + MATRIX; Elite Designer only if UI in scope) → authorize slice → implement → verify → report.
 - If context is full: finish current file, print NEXT FILE:path, stop. On CONTINUE, resume without rewriting completed files.
 - Label ASSUMPTION. End major steps with قرار الأستاذ. Reject mediocre output.
 

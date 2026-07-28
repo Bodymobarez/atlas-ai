@@ -97,6 +97,10 @@ Context full → finish current file → `NEXT FILE:path` → on `CONTINUE` resu
    - Then UX flows alignment, Design System under Elite direction
    - UI Agent may assist but cannot downgrade Elite direction
    - DATABASE + API design docs in parallel where safe
+   - INTEGRATIONS if MVP needs external systems:
+       agents/INTEGRATIONS_AGENT.md
+       modules/integrations/* (all connection types + platforms catalog)
+       → docs/integrations/MATRIX.md
    - Close G6 (requires Elite anti-slop pass for UI products)
 
 7. CROSS-CUTTING BASELINES

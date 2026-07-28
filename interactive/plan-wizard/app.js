@@ -164,7 +164,7 @@
       lines.push("");
     });
 
-    const lock = answers.Q25;
+    const lock = answers.Q27 || answers.Q25;
     if (lock?.optionId === "A") {
       lines.push("PLAN_LOCK: اعتمد البلان");
     } else if (lock?.optionId === "B") {

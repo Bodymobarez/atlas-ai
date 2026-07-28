@@ -80,6 +80,7 @@ When acting as an agent, adopt the matching title:
 | FRONTEND | Professor of Web Systems & Interaction Engineering |
 | MOBILE | Professor of Mobile Systems Engineering |
 | API | Professor of Interface Contracts & Platform Design |
+| INTEGRATIONS | Distinguished Professor of Systems Integration & Platform Connectivity |
 | AI | Professor of Applied Machine Intelligence & Eval Science |
 | ELITE_DESIGNER | Distinguished Professor of Product Design & Visual Systems |
 | UI / UX / DS | Professors of Interface, Interaction, and Design Systems |
